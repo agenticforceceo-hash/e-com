@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #141313;
+  --color-surface: #141313;
+  --color-on-surface: #e5e2e1;
+  --color-primary: #c9c6c5;
+  --color-secondary: #e9c349;
+  --color-gold: #d4af37;
+  --color-onyx: #0a0a0a;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+:root {
+  --background: #141313;
+  --foreground: #e5e2e1;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.rim-light {
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.gold-glow {
+  box-shadow: 0 0 15px rgba(233, 195, 73, 0.3);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 25px rgba(233, 195, 73, 0.5);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Professional UAE | Luxury Collections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#e5e2e1",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "on-primary": "#313030",
+                      "surface-tint": "#c9c6c5",
+                      "surface-bright": "#3a3939",
+                      "on-surface-variant": "#c4c7c7",
+                      "on-error-container": "#ffdad6",
+                      "inverse-primary": "#5f5e5e",
+                      "surface-container": "#201f1f",
+                      "surface-variant": "#353434",
+                      "on-secondary-fixed-variant": "#574500",
+                      "surface-container-high": "#2b2a2a",
+                      "on-secondary-container": "#342800",
+                      "tertiary": "#c6c6c7",
+                      "on-primary-container": "#7b7979",
+                      "secondary": "#e9c349",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-tertiary": "#2f3131",
+                      "on-surface": "#e5e2e1",
+                      "surface-container-highest": "#353434",
+                      "secondary-fixed-dim": "#e9c349",
+                      "outline": "#8e9192",
+                      "secondary-fixed": "#ffe088",
+                      "inverse-surface": "#e5e2e1",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#444748",
+                      "on-secondary-fixed": "#241a00",
+                      "on-error": "#690005",
+                      "background": "#141313",
+                      "tertiary-container": "#080a0a",
+                      "on-tertiary-container": "#78797a",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-primary-fixed-variant": "#474646",
+                      "secondary-container": "#af8d11",
+                      "on-background": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-dim": "#141313",
+                      "primary": "#c9c6c5",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary": "#3c2f00",
+                      "surface": "#141313",
+                      "inverse-on-surface": "#313030",
+                      "primary-container": "#0a0a0a",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary-fixed": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "unit": "8px",
+                      "section-padding": "120px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Playfair Display"],
+                      "body-lg": ["Montserrat"],
+                      "display-lg-mobile": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "body-md": ["Montserrat"],
+                      "label-caps": ["Montserrat"],
+                      "headline-sm": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .rim-light-hover:hover {
+            box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.3);
+        }
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(233, 195, 73, 0.4);
+        }
+        .sidebar-transition {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #141313; }
+        ::-webkit-scrollbar-thumb { background: #e9c349; }
+    </style>
+</head>
+<body class="selection:bg-secondary selection:text-background overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-secondary/20">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-secondary" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-headline-md text-headline-md tracking-widest text-secondary dark:text-secondary">ELITE PROFESSIONAL</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-secondary border-b border-secondary pb-1 font-body-md text-body-md" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Salons</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Academy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-secondary font-label-caps text-label-caps tracking-widest hover:opacity-80 transition-opacity">EN/AR</button>
+<button class="text-on-surface flex items-center">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-padding max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop min-h-screen">
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="fixed inset-y-0 left-0 z-50 w-72 bg-surface-container-lowest border-r border-secondary/10 p-10 transform -translate-x-full sidebar-transition md:relative md:translate-x-0 md:p-0 md:bg-transparent md:border-0 md:w-64" id="sidebar">
+<div class="flex flex-col gap-10">
+<div class="flex justify-between items-center md:hidden mb-4">
+<span class="font-headline-sm text-headline-sm text-secondary">Filters</span>
+<button class="text-secondary" id="close-sidebar"><span class="material-symbols-outlined">close</span></button>
+</div>
+<!-- Category -->
+<div class="space-y-6">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em]">Category</h3>
+<div class="flex flex-col gap-4">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox bg-transparent border-secondary/40 text-secondary focus:ring-0 focus:ring-offset-0 rounded-none" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">Treatments</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox bg-transparent border-secondary/40 text-secondary focus:ring-0 focus:ring-offset-0 rounded-none" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">Scalp Care</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox bg-transparent border-secondary/40 text-secondary focus:ring-0 focus:ring-offset-0 rounded-none" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">Styling</span>
+</label>
+</div>
+</div>
+<!-- Brand -->
+<div class="space-y-6">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em]">Brand</h3>
+<div class="flex flex-col gap-4">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox bg-transparent border-secondary/40 text-secondary focus:ring-0 focus:ring-offset-0 rounded-none" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">Elite Gold Label</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox bg-transparent border-secondary/40 text-secondary focus:ring-0 focus:ring-offset-0 rounded-none" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">Onyx Pro</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div class="space-y-6">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em]">Price (AED)</h3>
+<input class="w-full h-1 bg-secondary/20 appearance-none cursor-pointer accent-secondary" max="2000" min="100" step="50" type="range"/>
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span>100 AED</span>
+<span>2000 AED</span>
+</div>
+</div>
+<button class="mt-4 py-4 px-8 border border-secondary text-secondary font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary hover:text-background transition-all duration-500">
+                        Apply Filters
+                    </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1">
+<!-- Catalog Header -->
+<div class="flex justify-between items-end mb-12 border-b border-secondary/10 pb-8">
+<div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">The Collection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Curated professional formulas for the Middle East's elite.</p>
+</div>
+<div class="hidden md:block">
+<span class="font-label-caps text-label-caps text-secondary">Showing 1–12 of 48 products</span>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-16">
+<!-- Product Card 1 -->
+<div class="group flex flex-col gap-6 cursor-pointer">
+<div class="relative aspect-[0.67] bg-surface-container-low overflow-hidden rim-light-hover transition-all duration-700">
+<img alt="Luxury Hair Product" class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtA9VZ6QK5L2PMEcVKrRuLUnEDELY64foYiUDDsX-y3pihXHZW5K66I86l1Y7ntFp3SEEq9a9hWO5Ep8DmLVP9pgJDIi5rLYGGXRbKyFU9xSKdjUUASXiH6B-7hIDs_FyVqxptEieQIBy69_kdh_5PPNMl1SLXZNssMlbfSz0IxvbFKTlKHWItb6QGgKlWBfa7cN-gJb3UDY6rbj5cfAMlzHzjCxU3KLxfvhlE9e8z_yJ8wXShMbzGHY0c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<button class="w-full py-4 bg-secondary text-background font-label-caps text-label-caps uppercase tracking-widest">Add to Routine</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-[0.3em] uppercase">Treatment</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Onyx Restorative Elixir</h3>
+<p class="font-body-md text-body-md font-light text-on-surface-variant">545.00 AED</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col gap-6 cursor-pointer">
+<div class="relative aspect-[0.67] bg-surface-container-low overflow-hidden rim-light-hover transition-all duration-700">
+<div class="w-full h-full bg-cover bg-center grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Close up of a premium matte black shampoo bottle with minimalist gold foil lettering. The bottle sits on a damp, dark slate surface reflecting soft amber light. Moody, high-end commercial aesthetic for a luxury hair salon brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDa_7yyYJ1LZfqPEJnf4qSpVwxkEWCmVGtUC7hVvFWQddhMKPnvk4bWYveTGGM5OTttNcpBMZqAsQg-Mlsm_5QJdbf-wgzLvkU0AaVvngTTKbmi0EaZkPGKOKq5zcU2WFK91RfNGzFlq1uYcLHVWcCb8W_5j1RZhNLL3v9otcHWLPzM_SO9KTXr-SRV31eGrw_Fgl8EQnslsvYR0dWrywK51YRcTFIiRpZ2wah4YcpxtWCWejEWoYCU_-sv2mhkCLl7uzYOGjMI5tY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<button class="w-full py-4 bg-secondary text-background font-label-caps text-label-caps uppercase tracking-widest">Add to Routine</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-[0.3em] uppercase">Cleanse</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Silk Infusion Cleanser</h3>
+<p class="font-body-md text-body-md font-light text-on-surface-variant">320.00 AED</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col gap-6 cursor-pointer">
+<div class="relative aspect-[0.67] bg-surface-container-low overflow-hidden rim-light-hover transition-all duration-700">
+<div class="w-full h-full bg-cover bg-center grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="An elegant arrangement of three dark amber glass droppers on a black marble tray with gold veins. One dropper is tilted, letting a single thick, golden oil droplet catch the light. Shadows are long and dramatic, conveying a sense of extreme exclusivity and opulence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKLYPrtYufvDiCYSV6DgLOXoUVR0s4PFUGlnw8AearRM0b1Wfuj4Mn7Ad32-K-hGR6l41gOKJdsYGm3vyqNbivzST1TkpMSfJ-Jv8WDD-dWOtLpysRZihB1M_TXhSUOiac136q2OzvR06_ad0vIbu8VMBI_RvzERuLUGQVZtz1FC2q-oM30QPt-7wVRrVPdGcQZmbxHoI18HkFmcn8IFxW97MuRzllOkFiY-yiSCQ8hmAiXfwb1zRACy11zfiFl562IOyuJCVIMbM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<button class="w-full py-4 bg-secondary text-background font-label-caps text-label-caps uppercase tracking-widest">Add to Routine</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-[0.3em] uppercase">Serum</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Liquid Gold Scalp Serum</h3>
+<p class="font-body-md text-body-md font-light text-on-surface-variant">780.00 AED</p>
+</div>
+</div>
+<!-- More products... -->
+<!-- Repeat for 4, 5, 6 for layout demonstration -->
+<div class="group flex flex-col gap-6 cursor-pointer hidden lg:flex">
+<div class="relative aspect-[0.67] bg-surface-container-low overflow-hidden rim-light-hover transition-all duration-700">
+<img alt="Luxury Hair Product" class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtA9VZ6QK5L2PMEcVKrRuLUnEDELY64foYiUDDsX-y3pihXHZW5K66I86l1Y7ntFp3SEEq9a9hWO5Ep8DmLVP9pgJDIi5rLYGGXRbKyFU9xSKdjUUASXiH6B-7hIDs_FyVqxptEieQIBy69_kdh_5PPNMl1SLXZNssMlbfSz0IxvbFKTlKHWItb6QGgKlWBfa7cN-gJb3UDY6rbj5cfAMlzHzjCxU3KLxfvhlE9e8z_yJ8wXShMbzGHY0c"/>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-[0.3em] uppercase">Masque</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Velvet Hydration Masque</h3>
+<p class="font-body-md text-body-md font-light text-on-surface-variant">490.00 AED</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 border-t border-secondary/10 pt-10 flex justify-center items-center gap-8">
+<button class="text-on-surface-variant hover:text-secondary flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined">west</span>
+<span class="font-label-caps text-label-caps uppercase">Prev</span>
+</button>
+<div class="flex gap-6 font-body-md text-body-md">
+<span class="text-secondary font-bold">01</span>
+<span class="text-on-surface-variant hover:text-on-surface cursor-pointer">02</span>
+<span class="text-on-surface-variant hover:text-on-surface cursor-pointer">03</span>
+<span class="text-on-surface-variant hover:text-on-surface cursor-pointer">04</span>
+</div>
+<button class="text-on-surface-variant hover:text-secondary flex items-center gap-2 transition-colors">
+<span class="font-label-caps text-label-caps uppercase">Next</span>
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- FAB: Elite AI -->
+<button class="fixed bottom-10 right-10 z-50 bg-secondary w-16 h-16 rounded-full flex items-center justify-center text-background gold-glow hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[32px]">auto_awesome</span>
+<span class="absolute -top-1 -right-1 bg-white text-[8px] px-1 font-bold text-background uppercase tracking-tighter">AI</span>
+</button>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm text-secondary mb-6 block">ELITE PROFESSIONAL</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Elevating the standard of professional hair care across the Emirates.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2">Explore</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Collections</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Salons</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Academy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2">Service</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">My Account</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Orders</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Privacy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2">Newsletter</h4>
+<div class="relative border-b border-secondary/40 pb-2">
+<input class="bg-transparent border-none p-0 w-full focus:ring-0 text-on-surface placeholder:text-on-surface-variant font-label-caps text-label-caps" placeholder="YOUR EMAIL" type="email"/>
+<button class="absolute right-0 top-0 text-secondary">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center border-t border-secondary/5 pt-8">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.2em] opacity-60">© 2024 ELITE PROFESSIONAL UAE. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const closeSidebar = document.getElementById('close-sidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        mobileMenuToggle?.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+        });
+
+        closeSidebar?.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !mobileMenuToggle.contains(e.target) && !sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+
+        // Micro-interactions for product cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>
