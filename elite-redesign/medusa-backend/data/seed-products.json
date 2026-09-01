@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "title": "Kyo Majime' Demi- Permanent Low pH Toner",
+      "subtitle": "Enriched with Active Plex",
+      "description": "A professional low pH toner for elite hair artistry.",
+      "handle": "kyo-majime-toner",
+      "is_giftcard": false,
+      "status": "published",
+      "images": ["https://www.eliteprofessionaluae.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-26-at-4.28.13-PM-300x300.jpeg"],
+      "options": [{ "title": "Size" }],
+      "variants": [
+        {
+          "title": "Standard",
+          "prices": [{ "amount": 1286, "currency_code": "usd" }],
+          "options": { "Size": "Standard" }
+        }
+      ]
+    }
+  ]
+}

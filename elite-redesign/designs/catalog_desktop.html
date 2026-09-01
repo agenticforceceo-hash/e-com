@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Collection | Elite Professional UAE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #141313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .gold-rim-hover {
+            transition: all 0.5s ease-in-out;
+            border: 1px solid rgba(212, 175, 55, 0);
+        }
+        .gold-rim-hover:hover {
+            border: 1px solid rgba(233, 195, 73, 0.3);
+            box-shadow: 0 0 30px rgba(233, 195, 73, 0.05);
+            transform: translateY(-4px);
+        }
+        /* Custom range slider styling */
+        input[type='range']::-webkit-slider-runnable-track {
+            background: #444748;
+            height: 2px;
+        }
+        input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 12px;
+            width: 12px;
+            background: #e9c349;
+            border-radius: 0;
+            margin-top: -5px;
+            cursor: pointer;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffe088",
+                        "secondary": "#e9c349",
+                        "primary-fixed": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "tertiary": "#c6c6c7",
+                        "on-primary-container": "#7b7979",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474646",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#313030",
+                        "secondary-container": "#af8d11",
+                        "tertiary-container": "#080a0a",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#c4c7c7",
+                        "surface-container-high": "#2b2a2a",
+                        "surface-dim": "#141313",
+                        "on-secondary-fixed": "#241a00",
+                        "inverse-primary": "#5f5e5e",
+                        "on-tertiary": "#2f3131",
+                        "surface-variant": "#353434",
+                        "primary-container": "#0a0a0a",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-tint": "#c9c6c5",
+                        "surface-container-highest": "#353434",
+                        "secondary-fixed-dim": "#e9c349",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary": "#3c2f00",
+                        "outline": "#8e9192",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#3a3939",
+                        "error-container": "#93000a",
+                        "primary": "#c9c6c5",
+                        "surface": "#141313",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "background": "#141313",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-error": "#690005",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline-variant": "#444748",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary-container": "#78797a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "section-padding": "120px",
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-xl border-b border-secondary/20">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-display-lg text-headline-sm tracking-tighter text-secondary" href="#">Elite Professional</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1 duration-300 ease-in-out" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary-fixed transition-colors duration-300 ease-in-out" href="#">Brands</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary-fixed transition-colors duration-300 ease-in-out" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary-fixed transition-colors duration-300 ease-in-out" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-label-caps text-label-caps text-secondary cursor-pointer hover:opacity-80 transition-opacity">EN/AR</span>
+<button class="text-secondary hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A sophisticated headshot of a luxury brand customer or hair care professional, with soft studio lighting and a clean, high-contrast dark background to match the Elite Professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR0YCKVwdmgluE-D8fIWgu-rqF4hYbUzXFeFgTcWJsHIXR_MH9Z489H0QJWyGujCsOfFTcK6y5Df6MDavU4k9gSOk0Mz58rpRubcdTdTZKRaGzl0y0cRWeY3O3aKcbo3__4g8x4OewG0RVtv19-wq-Bcq0HgrW1y9GaHoVJz9TJyrG0mZwx0cv2e1CxD6R1PbSzFY3cR3HRZoSm1MHcuYLEylU5K9vN8vgEtlyxRimg6MPQwmITsQ0Hv5mBNcAC3BagTppDmpuNA0"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-padding max-w-container-max mx-auto px-margin-desktop">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-display-lg text-display-lg text-secondary mb-4">The Collection</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Curated professional formulas for the Middle East's elite. Discover the pinnacle of hair care excellence, where luxury meets scientific precision.</p>
+</header>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Navigation (25%) -->
+<aside class="w-full md:w-1/4 space-y-12">
+<!-- Categories -->
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-6">Browse by Category</h3>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors flex justify-between items-center" href="#">Cleanse <span class="text-[10px] opacity-40">01</span></a></li>
+<li><a class="text-secondary flex justify-between items-center" href="#">Condition <span class="text-[10px]">02</span></a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors flex justify-between items-center" href="#">Treatment <span class="text-[10px] opacity-40">03</span></a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors flex justify-between items-center" href="#">Style <span class="text-[10px] opacity-40">04</span></a></li>
+</ul>
+</div>
+<!-- Brands -->
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-6">Refine by Brand</h3>
+<div class="space-y-3 font-body-md text-body-md">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox w-4 h-4 bg-transparent border-outline-variant text-secondary focus:ring-0" type="checkbox"/>
+<span class="group-hover:text-secondary transition-colors">L'OR NOIR</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox w-4 h-4 bg-transparent border-outline-variant text-secondary focus:ring-0" type="checkbox"/>
+<span class="group-hover:text-secondary transition-colors">KYO</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox w-4 h-4 bg-transparent border-outline-variant text-secondary focus:ring-0" type="checkbox"/>
+<span class="group-hover:text-secondary transition-colors">FREELIMIX</span>
+</label>
+</div>
+</div>
+<!-- Price Filter -->
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-6">Price Filter</h3>
+<input class="w-full bg-outline-variant/30 appearance-none h-[2px] cursor-pointer" max="2000" min="0" step="50" type="range"/>
+<div class="flex justify-between mt-4 font-label-caps text-[10px] text-on-surface-variant tracking-widest">
+<span>0 AED</span>
+<span>2,000 AED</span>
+</div>
+</div>
+<!-- Promotional Banner -->
+<div class="p-8 border border-secondary/10 bg-surface-container-low relative overflow-hidden group">
+<div class="relative z-10">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em] mb-4 block">EXCLUSIVE ACCESS</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Elite Salon Partnerships</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-6 leading-relaxed">Unlock wholesale pricing and dedicated concierge support for your salon.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-[11px] text-secondary group-hover:gap-4 transition-all" href="#">ENQUIRE NOW <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+</aside>
+<!-- Product Grid (75%) -->
+<section class="w-full md:w-3/4">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap- gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up artistic studio shot of a sleek black obsidian-style hair product bottle with metallic gold typography. The setting features a dark marble surface with fine gold veins and atmospheric rim lighting, creating a moody, high-end luxury feel for Elite Professional's catalogue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbtBzO0Ofzb3FOdRp8ZQZq0_fAPUyzTg1gLDDznsEu9izZfKbCJMQJz5ZKnAT7ajwgmrw8QYw6K28bhsSCaGMxWQU9nDjPJ5Szek1khyJMQ-bO9Kd-yFOUY9iKc4JxcslS-V7Ez7dc0v0_PNORC6A_F9d_VV3iaWeg2au2kkrGGIFjNkKXG2G9CF9Ofv2X9NOiFMT_Lq__BLQQaYSexmPvGLSmesHWmWnx-CcMNN_N76qJ8WiB8iw-6jXjPxZRodm-hxQhHiHhTBU"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">L'OR NOIR</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Huile Sublime Repair</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">545.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="High-resolution product photography of a premium hair treatment mask in a matte black jar. Minimalist champagne gold labeling. The lighting highlights the elegant curves of the container against a dark, velvet-like background to emphasize exclusivity and salon-grade quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Lg0eWr0mBaoMW6od_7UXbLUtL7Vqvx0Z7FHxwAjRii8TQw9gtSm-OUepfUqYCfbXaUC3gKtp_8nY9jABEzjSvY_Tw01f0mmnwUi_TdHjS5ZQKk-8Wu5FGir45677gyXW5CYkr6O8XfiDQHOqFVbgWpDcfhJULkpeUq87UAyepsO6wW3x3cm6jZ2EFgFhjFSa9ozM9i6J7zd7YN5QrUajUx2V3-wTOokDzglcOVeqZ0GkrgSxnK2u8BbtGjMAwr6nL8KWVKoOQBo"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">KYO</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Hydra Intense Masque</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">320.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional hair care serum in a translucent dark glass bottle with a gold pump dispenser. Bubbles and texture are visible inside the formula. The lighting is dramatic, with golden highlights dancing off the glass edges. Set on a dark reflective surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCptzdyCBW--cIjAon7HtrLrza8EPDvIqz9xX40DZ2cJZWQdNh5VWj-QCoCSvbrItSPansiZ7WnuFnxPCJvCjChq97f_VUpayIoNGpu9P9RohsMBy63ZzG1mchEcsKDI2V6BUjTWPWGlOu7cQTw4AaXaGpGBsReI3I65RdnYJ1EhBA77TM7XWP5koolA7qCA2947dvwtzia6He6f3Ryz4ZfE-w9a-wBRemtcrCCFFvq8-GSY9A0HHWiUrrn4yUxk77rQRJFEUNoZWw"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">L'OR NOIR</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Silk Infusion Nectar</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">680.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A collection of minimalist hair styling products in tall, slender black canisters. Gold accents on the caps and branding. The image uses shallow depth of field to focus on the textures of the bottles against a sophisticated dark salon interior background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV4YLmKAJ-MCkn3Wn0q3mJ_ViVlnKPyJPXfSKIoiFbpYF72GyH-ro6ThqqrY4bfMNnSw6UEJdhlD-oA4kEFEHfxQDwRQYyJ1qHJBrZX0aBzS3gBF0__Ef-2YJQRS0nHYXMMyIOcvfzfistYDdaBeC4gSqTPbXGjoj2_fCpKqOYOle98vT1-DLeXXovn3D8PTqA2-U_z0uxTQ7MIfp9YtMPImUMBAIDcvPO6R2ioaPgvsR0Wrjq9Cx32LWNCMaRoQ1BFSpzGj_ys3Q"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">FREELIMIX</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Precision Finish Mist</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">215.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Deep luxury hair conditioner in a black tube with gold details. The product is placed asymmetrically in the frame, surrounded by vast dark space and a soft golden rim light that defines its silhouette. High-end cosmetic product photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLZNelNA8QjLxmCMs9Z-JQu2MK3vwRfYopzwmIo5P8eycLZdW7Ibfxkwi2JSqVoJJvgMSgPkkeJNcd0--UTGhvI0Xhzjgj3L4lmlTKaVpmDI0xnUWfP4tI4VKST5BnVKRlZxmRpPgGnd8cxVcra53kqzN8nGAwGms0tYpp7_AhJUdDDUEpkpn4XwThjlpV0rgGJ_OA_427PPX1hdovmePqBEP6bdxhFUi630VRPUtTFgbRlPvMWNCu7VWHYW_CiqoQA-H9Hdkc_mY"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">KYO</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Volume Restore Rinse</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">285.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim relative">
+<div class="absolute top-4 left-4 z-10 bg-secondary text-on-secondary font-label-caps text-[10px] px-3 py-1">LIMITED</div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Luxury hair care gift set presented in a black textured box with gold foil logo. Inside, products are nestled in satin-like dark fabric. Professional product flat-lay on a black marble background with warm lighting, evoking a sense of premium gift-giving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgknLsA_JX6nKBfyRgriXoXgCwXGVBBwJ4h3DmGKqcl1Ea0kynUmqfzJvNgXTJLEDmE31LZtuJ1pxk0KDuKLQ_XamIHKONxJWj9pXbr92B-YxGHAFwkWNU040jni1wnW13FZ8izbRdDFl0CMwLoOqaMj2u689H49fYJlmGDBgnpuhbQIXwKpdLlDycI0pYKcy4kKY4yuFxIlqmNbhJufrAXxoAlNFEFqUfWJjNHgT044LTWImQPrHGsdGdXzGvJrvlxKL_L86OULw"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">L'OR NOIR</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Signature Ritual Box</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">1,250.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a high-tech hair protection spray bottle. Glossy black finish with sharp white and gold text. Tiny water droplets on the bottle suggest freshness. Dark, professional studio environment with clean lines and sharp highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvgKm-tIU-c1LdusocFF2tT5wZM_9vJzxPa8D5eUEOwFgcsW8UwdK7i18L74YlH2wpcx454UEq2SgbY5cllAsI5b65EqGP31y-Sgo4aCjwXEn_71GB0ug7rGwLbJPuBNnytO7s_USzhCusPrGqt3JO42dWVDfVkmHRUrAgh69vB8cQaDGf8FmEY1I_ttjYSiQ1Oa5rIdzV8gaVmLZJ8BSaCGQAWOBusKc0zmTZcuxnB_V2Mz-ukQ4jPR1QJKJWvYqjEprpx3K4faQ"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">FREELIMIX</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Heat Shield Elixir</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">185.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="bg-surface-container-lowest p-6 gold-rim-hover group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional-grade scalp treatment bottle with a precision applicator. Minimalist black design with gold accents. The shot is angled to emphasize the product's architectural form. Dark, moody lighting with a focus on the gold branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdEIAXWRj1Ha1KUnaBF4Rz4fLnZFT54ugwXtPvi9ZquPgAGwg1BKyK5ybBCEO6K1JRXEPEienYc41RK0ZFgCU_iiEXUJyXfxPvq54o4Ha7kBpnMm0QUlS1-VjT1Tvktr0Z8MqWUPlEiS7GWbWCkKZQKCc3OIZCh6elSn25M7lOLntCKKMUxdAZFcPrHPgy1gcC6AyVyhleN24DCCxvZfgSo20QrAVwS0kmQQw64cPW8_4dCzHL_eAu3uEcZ_ugVFdCq_u_BhBokk"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary-fixed/50 mb-2 block uppercase">KYO</span>
+<h3 class="font-headline-sm text-lg text-on-surface mb-3 leading-tight">Scalp Revitalizer</h3>
+<div class="flex justify-between items-center">
+<span class="font-display-lg text-lg text-secondary">410.00 <span class="font-label-caps text-xs">AED</span></span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-6">
+<button class="text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<div class="flex gap-4 font-label-caps text-xs">
+<span class="text-secondary border-b border-secondary pb-1 cursor-default">01</span>
+<span class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">02</span>
+<span class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">03</span>
+<span class="text-on-surface-variant/30 cursor-default">...</span>
+<span class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">12</span>
+</div>
+<button class="text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full pt-section-padding pb-8 border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="col-span-1 md:col-span-1">
+<a class="font-display-lg text-headline-md text-secondary block mb-6" href="#">Elite Professional</a>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">The Middle East's definitive source for professional luxury hair care formulas and elite salon solutions.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-secondary mb-8">Navigation</h4>
+<ul class="space-y-4 font-body-md text-sm">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Collections</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Experience</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-secondary mb-8">Legal</h4>
+<ul class="space-y-4 font-body-md text-sm">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-secondary mb-8">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary outline-none py-2 font-body-md text-sm text-on-surface placeholder:text-on-surface-variant/30" placeholder="Your Email Address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-secondary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto text-center">
+<p class="font-label-caps text-[10px] text-on-surface-variant/40 tracking-widest uppercase">© 2024 Elite Professional UAE. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- SideNavBar (AI Assistant Bubble) -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="flex items-center justify-center bg-secondary text-on-secondary rounded-full h-14 w-14 shadow-2xl hover:scale-110 transition-transform active:scale-95 group shadow-[0_0_20px_rgba(233,195,73,0.4)]">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<!-- Tooltip/Hover Label -->
+<div class="absolute right-full mr-4 bg-secondary text-on-secondary px-4 py-2 font-label-caps text-[10px] whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity">
+                ELITE CONCIERGE
+            </div>
+</button>
+</div>
+<script>
+        // Simple Interaction: Smooth Scroll top
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Floating Header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-background/95', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-background/95', 'shadow-lg');
+            }
+        });
+    </script>
+</body></html>
